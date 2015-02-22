@@ -48,3 +48,6 @@ func init() {
 	})
 }
 ```
+
+That's all, as gotic has `Add`ed `some/file`, each call to `fs.ReadFile()`, will return the embedded `[]byte`
+instead of actually read the file.
