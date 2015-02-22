@@ -3,8 +3,11 @@ Converts files files into go code.
 
 # Concept
 Gotic is both, a library and an utility.
-The library `gotic/fs`wraps `ioutil.ReadFile()`, and the utility,
-`gotic` takes one or more files and genaraates go code representing them (as one or more `[]byte{ ... }`)
+
+The library `gotic/fs`wraps `ioutil.ReadFile()`.
+
+The utility, `gotic`, takes one or more files and genaraates go code representing
+them (as one or more `[]byte{ ... }`)
 
 # Install
 As usual: `go get github.com/gchaincl/gotic`
