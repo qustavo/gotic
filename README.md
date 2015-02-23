@@ -43,9 +43,7 @@ package main
 import "github.com/gchaincl/gotic/fs"
 
 func init() {
-	fs.Add("some/file", []byte{ 
-		0x70,0x72,0x6F,0x63,0x65, ...
-	})
+	fs.Add("some/file", []byte{ "\xff\xd8\xff\xe1 ..." })
 }
 ```
 
