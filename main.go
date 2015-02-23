@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"io/ioutil"
 	"os"
 	"path/filepath"
@@ -14,7 +15,7 @@ import "github.com/gchaincl/gotic/fs"
 
 func init() {
 {{range $file, $data := .Files}}
-	fs.Add("{{$file}}", []byte{ {{$data}} })
+	fs.Add("{{$file}}", {{$data}})
 {{end}}
 }
 `
@@ -50,7 +51,7 @@ func main() {
 				panic(err)
 			}
 
-			g.Files[abs] = bytesToString(data)
+			g.Files[abs] = fmt.Sprintf("%q", data)
 		}
 	}
 
